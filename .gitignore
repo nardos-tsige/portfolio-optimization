@@ -1,0 +1,67 @@
+# In portfolio-optimization/.gitignore
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+notebooks/*.ipynb
+
+# Data
+data/raw/
+data/processed/*.csv
+data/processed/*.pkl
+!data/processed/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.venv
+
+# Model files
+*.h5
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# Reports
+reports/*.pdf
+reports/*.html
+EOF
