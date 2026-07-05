@@ -1,67 +1,37 @@
-# In portfolio-optimization/.gitignore
-cat > .gitignore << 'EOF'
+gitignore = """
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
+*.pyc
 venv/
-ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+env/
+*.so
 *.egg-info/
-.installed.cfg
-*.egg
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
-notebooks/*.ipynb
 
-# Data
+# Data - Keep processed data but ignore raw
 data/raw/
 data/processed/*.csv
-data/processed/*.pkl
+data/processed/*.png
 !data/processed/.gitkeep
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store
 Thumbs.db
 
 # Logs
-logs/
 *.log
+*.zip
 
-# Environment
-.env
-.venv
+# Results
+results/
+"""
 
-# Model files
-*.h5
-*.pkl
-*.joblib
-*.pt
-*.pth
-
-# Reports
-reports/*.pdf
-reports/*.html
-EOF
+with open('.gitignore', 'w') as f:
+    f.write(gitignore.strip())
+print("✓ Updated: .gitignore")
